@@ -996,6 +996,7 @@ Files: cmake/TC-rx.ld
  test/test-scmpu.c
  test/test-stdio/meson.build
  test/test-stdio/test-dprintf.c
+ test/test-stdio/test-setvbuf.c
  test/test-string/meson.build
  test/test-string/test-memchr.c
  test/test-string/test-memmem.c
@@ -1192,6 +1193,7 @@ Files: empty-libs/meson.build
  libc/machine/loongarch/machine/CMakeLists.txt
  libc/machine/msp430/CMakeLists.txt
  libc/stdio/atomic_store.c
+ libm/math/sf_rem_pio2.c
  test/test-ctype/CMakeLists.txt
  test/test-ctype/meson.build
  test/test-ctype/test-iswctype.c
@@ -3054,8 +3056,9 @@ Files: .clang-format
  .github/Dockerfile-zephyr
  .github/do-build
  .github/do-cmake-test
- .github/do-linux
+ .github/do-linux-misc
  .github/do-many
+ .github/do-run
  .github/do-test
  .github/do-test-noopt
  .github/do-zephyr
@@ -4494,7 +4497,6 @@ Files: libm/common/fdlibm.h
  libm/math/k_sin.c
  libm/math/k_tan.c
  libm/math/kf_cos.c
- libm/math/kf_rem_pio2.c
  libm/math/kf_sin.c
  libm/math/kf_tan.c
  libm/math/math.tex
@@ -4562,7 +4564,6 @@ Files: libm/common/fdlibm.h
  libm/math/sf_log10.c
  libm/math/sf_log2.c
  libm/math/sf_pow.c
- libm/math/sf_rem_pio2.c
  libm/math/sf_remainder.c
  libm/math/sf_scalb.c
  libm/math/sf_signif.c
