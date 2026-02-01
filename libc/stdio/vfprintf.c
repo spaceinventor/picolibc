@@ -33,6 +33,8 @@
 /* From: Id: printf_p_new.c,v 1.1.1.9 2002/10/15 20:10:28 joerg_wunsch Exp */
 /* $Id: vfprintf.c 2191 2010-11-05 13:45:57Z arcanum $ */
 
+#define my_putc putc
+
 #ifndef PRINTF_NAME
 #define PRINTF_VARIANT __IO_VARIANT_DOUBLE
 #define PRINTF_NAME    __d_vfprintf
@@ -796,7 +798,6 @@ ret:
     __funlock_return(stream, stream_len);
 #undef my_putc
 #undef ap
-fail:
     stream->flags |= __SERR;
     stream_len = -1;
     goto ret;
